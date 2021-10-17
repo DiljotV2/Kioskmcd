@@ -1,52 +1,75 @@
 {
-    "requiresCompatibilities": [
-        "EC2"
-    ],
-    "containerDefinitions": [
+  "ipcMode": null,
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "environmentFiles": null,
+      "logConfiguration": null,
+      "entryPoint": null,
+      "portMappings": [
         {
-            "name": "MyDiaryAppContainer",
-            "image": "052504292351.dkr.ecr.ap-southeast-2.amazonaws.com/mydiaryimg",
-            "memory": "256",
-            "resourceRequirements": null,
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": "8000",
-                    "containerPort": "5000",
-                    "protocol": "tcp"
-                }
-            ],
-            "environment": [
-                {
-                    "name": "Student Id",
-                    "value": "102408774"
-                },
-                {
-                    "name": "Student Name",
-                    "value": "Diljot Singh"
-                }
-            ],
-            "environmentFiles": [],
-            "secrets": null,
-            "mountPoints": null,
-            "volumesFrom": null,
-            "hostname": null,
-            "user": null,
-            "workingDirectory": "./",
-            "extraHosts": null,
-            "logConfiguration": null,
-            "ulimits": null,
-            "dockerLabels": null,
-            "dependsOn": null,
-            "repositoryCredentials": null
+          "hostPort": 8000,
+          "protocol": "tcp",
+          "containerPort": 8000
         }
-    ],
-    "volumes": [],
-    "networkMode": null,
-    "memory": "256",
-    "cpu": "1 vCPU",
-    "placementConstraints": [],
-    "family": "MyDiaryAppTask",
-    "taskRoleArn": "",
-    "tags": []
+      ],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": null,
+      "memory": 256,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "052504292351.dkr.ecr.ap-southeast-2.amazonaws.com/mydiaryimg:8f9317cd173c531d33eb0a63fcdc3d2cfe62a376",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "myappcontainer"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "256",
+  "taskRoleArn": null,
+  "compatibilities": ["EXTERNAL", "EC2"],
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:052504292351:task-definition/MyApp:3",
+  "family": "MyApp",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": ["EC2"],
+  "networkMode": null,
+  "cpu": "1024",
+  "revision": 3,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
 }
