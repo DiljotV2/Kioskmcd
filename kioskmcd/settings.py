@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d6mi=mtv$u&ke4=&6bl&z989&mz#o9gazr1+g!w9!#08r!=y)*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-54-252-162-91.ap-southeast-2.compute.amazonaws.com', '54-252-162-91']
+ALLOWED_HOSTS = ['127.0.0.1', 'ec2-54-252-162-91.ap-southeast-2.compute.amazonaws.com', '54-252-162-91']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chat'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'kioskmcd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
