@@ -29,7 +29,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "052504292351.dkr.ecr.ap-southeast-2.amazonaws.com/mydiaryimg:a06017412fed8c196286cf823212ed5afcb9b308",
+      "image": "052504292351.dkr.ecr.ap-southeast-2.amazonaws.com/mydiaryimg:834f435d193eddcaed76cfb26eca25d31186249b",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -53,7 +53,7 @@
   "memory": null,
   "taskRoleArn": null,
   "compatibilities": ["EXTERNAL", "EC2"],
-  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:052504292351:task-definition/MyApp:7",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:052504292351:task-definition/MyApp:9",
   "family": "MyApp",
   "requiresAttributes": [
     {
@@ -67,7 +67,7 @@
   "requiresCompatibilities": ["EC2"],
   "networkMode": null,
   "cpu": null,
-  "revision": 7,
+  "revision": 9,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
